@@ -116,9 +116,6 @@ scholar:
   sort_by: none
   order: descending
 
-  # group_by: year
-  # group_order: descending
-
   source: ./_bibliography
   bibliography: journal
   bibliography_template: bib
@@ -127,8 +124,6 @@ scholar:
   join_strings:    true
 
   details_dir: bibliography
-  # details_layout: bib.html
-  # details_link:   Details
 
   query: "@*"
 
