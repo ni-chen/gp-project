@@ -1,0 +1,89 @@
+\usepackage{hyperref,caption,subcaption,mwe,tikz,tkz-tab,multirow,booktabs,amsmath,amsfonts,amssymb,bm,mathtools,threeparttable,color,enumitem,float,appendix,subfiles,physics,lineno,epstopdf,pgfplotstable,csvsimple,cleveref,xr,cellspace,grffile,graphicx,xcolor,colortbl,algorithm,changepage,pgfplots,tikz-3dplot,url,multicol,ragged2e,mathrsfs,longtable}
+\usepackage[noend]{algpseudocode}
+\usepackage[binary-units=true]{siunitx}
+\usepackage[percent]{overpic}
+\usepackage[normalem]{ulem}
+
+\usepackage{mathdots,yhmath,cancel,array,gensymb,tabularx,extarrows}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+
+\urlstyle{same}
+
+% Fonts and language
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{mathpazo} % Widely available alternative to Garamond
+\RequirePackage[scaled]{helvet}
+\RequirePackage[T1]{fontenc}
+
+%\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{tikzmark,quotes,angles,decorations.markings}
+\usetikzlibrary{calc}
+
+
+\hypersetup{
+colorlinks   = true, %Colours links instead of ugly boxes
+urlcolor     = black, %Colour for external hyperlinks
+linkcolor    = black, %Colour of internal links
+citecolor   = blue %Colour of citations
+}
+
+% \definecolor{gray}{rgb}{0.5,0.5,0.5}
+\newcommand{\RE}[1]{\textcolor[rgb]{1,0,0}{#1}}
+
+% comments
+% \definecolor{mygreen}{RGB}{49,163,84}
+% \definecolor{myblue}{RGB}{67,162,202}
+% \definecolor{myred}{RGB}{227,74,51}
+% \definecolor{mypurple}{RGB}{136,86,167}
+
+
+% \usepackage{attachfile}
+% \usepackage{geometry}
+% \usepackage{algorithm,algpseudocode}
+% \geometry{margin=0.6in}
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{DRAFT}
+% \SetWatermarkScale{1}
+
+% math symbols
+% \newcommand{\abs}[1]{\left|#1\right|}
+% \newcommand{\norm}[1]{\left\|#1\right\|}
+
+
+\newcommand{\A}{\mathbf{A}}
+\newcommand{\vr}{\vb*{r}}
+\newcommand{\vbb}{\vb*{b}}
+% \newcommand{\bvec}[1]{\mathbf{#1}}
+% \newcommand{\bgreek}[1]{\boldsymbol{#1}}
+\newcommand{\diag}{\text{diag}}
+\newcommand{\ind}{\text{ind}}
+\newcommand{\prox}{\text{prox}}
+
+\newcommand{\vuu}{\vb*{u}}
+\newcommand{\voo}{\vb*{o}}
+\newcommand{\vx}{\vb*{x}}
+\newcommand{\vv}{\vb*{v}}
+\newcommand{\vw}{\vb*{w}}
+\newcommand{\vy}{\vb*{y}}
+\newcommand{\vI}{\vb*{I}}
+\newcommand{\vP}{\vb*{P}}
+\newcommand{\vp}{\vb*{p}}
+
+\newcommand{\brho}{\boldsymbol{\rho}}
+
+
+\let\oldeqref\eqref
+\renewcommand{\eqref}[1]{Eq.~\textbf{\oldeqref{#1}}}
+
+% \captionsetup[subfigure]{font={small}, skip=-2pt, singlelinecheck=false}
+
+\graphicspath{{./figure/}}
+
+% \linenumbers

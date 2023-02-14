@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open source code</title>
+  <meta name="description"
+    content="Paper with code in optics">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2021/opensource-code/">
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/images/favicon.ico">
+
+  <!-- Load KaTex jQuery -->
+  <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+  <!-- Load KaTeX -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css"> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="http://localhost:4000/css/font-awesome/css/font-awesome.min.css">
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56515654-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-56515654-4');
+  </script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0662740a0d2368cc5cfaa508dd843362";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  
+   <!-- Baidu Analytics -->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0662740a0d2368cc5cfaa508dd843362";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <script>
+    function ShowOrHide(select='inpress') {
+        // var elem = document.getElementById("btn");
+        var x = document.getElementById('inpress');
+        var y = document.getElementById('byyear');
+        var z = document.getElementById('bytype');
+        var w = document.getElementById('bytalk');
+        var u = document.getElementById('bydiscip');
+
+
+        var x_btn = document.getElementById("btn_inpress");
+        var y_btn = document.getElementById("btn_byyear");
+        var z_btn = document.getElementById("btn_bytype");
+        var w_btn = document.getElementById("btn_bytalk");
+        var u_btn = document.getElementById("btn_bydiscip");
+
+
+        // document.getElementById(select).display='block';
+        // document.getElementById("btn_"+select).disabled=true;
+
+        if (select == 'inpress') {          
+            x.style.display = 'block';
+            x_btn.disabled = true; 
+            y.style.display = 'none';
+            y_btn.disabled = false;   
+            z.style.display = 'none';
+            z_btn.disabled = false;   
+            w.style.display = 'none';
+            w_btn.disabled = false;   
+            u.style.display = 'none';
+            u_btn.disabled = false;  
+            // elem.innerHTML = typetxt;
+        } else if (select == 'byyear'){          
+            x.style.display = 'none';
+            x_btn.disabled = false;  
+            y.style.display = 'block';
+            // y_btn.closest('li').addClass('active');   
+            y_btn.disabled = true;
+            z.style.display = 'none';
+            z_btn.disabled = false;  
+            w.style.display = 'none';
+            w_btn.disabled = false;  
+            u.style.display = 'none';
+            u_btn.disabled = false;   
+            // elem.innerHTML = yeartxt;
+        } else if (select == 'bytype'){          
+            x.style.display = 'none';
+            x_btn.disabled = false;  
+            y.style.display = 'none';
+            y_btn.disabled = false;  
+            z.style.display = 'block';
+            z_btn.disabled = true;
+            // z_btn.parents('li').addClass('active').siblings().removeClass('active'); 
+            w.style.display = 'none';
+            w_btn.disabled = false;   
+            u.style.display = 'none';
+            u_btn.disabled = false;  
+        }
+        else if (select == 'bytalk'){          
+            x.style.display = 'none';
+            x_btn.disabled = false;  
+            y.style.display = 'none';
+            y_btn.disabled = false;  
+            z.style.display = 'none';
+            z_btn.disabled = false;
+            w.style.display = 'block';
+            w_btn.disabled = true;  
+            u.style.display = 'none';
+            u_btn.disabled = false;  
+        }
+        else if (select == 'bydiscip'){          
+            x.style.display = 'none';
+            x_btn.disabled = false;  
+            y.style.display = 'none';
+            y_btn.disabled = false;  
+            z.style.display = 'none';
+            z_btn.disabled = false;
+            w.style.display = 'none';
+            w_btn.disabled = false;   
+            u.style.display = 'block';
+            u_btn.disabled = true;   
+        }
+    }
+  </script>
+
+  
+
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+  <!-- google search --> 
+  <meta name="google-site-verification" content="zA-pyWCSMDUz2guOFMd9WzdV7NSk1GTXBbDOrCN9FN4" />
+
+</head>
+
+
+  <body text-align="justify">
+    
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://localhost:4000/">Artificial Intelligence for Scientific Imaging</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://localhost:4000/">Home</a></li>
+				<li><a href="http://localhost:4000/bio">Bio</a></li>
+				<!-- <li><a href="http://localhost:4000/team">Team</a></li> -->
+				<!-- <li><a href="http://localhost:4000/vacancies">Vacancies</a></li> -->
+				<li><a href="http://localhost:4000/publications">Publications</a></li>
+				<li><a href="http://localhost:4000/research">Research</a></li>
+				<!-- <li><a href="http://localhost:4000/funding">Funding</a></li> -->
+				<!-- <li><a href="http://localhost:4000/resource">Resource</a></li> -->
+				<li><a href="http://localhost:4000/posts">Notes</a></li>
+				<!-- <li><a href="http://localhost:4000/conduct">Conduct</a></li> -->
+			</ul>
+		</div>
+	</div>
+</div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container content post">
+  <h3><strong>Open source code</strong><br/>
+  <small>May 5, 2021</small></h3>
+  <hr>
+  <h1 style="text-align: center;">
+Paper with code in optics
+</h1>
+
+<p><br /></p>
+
+<p>Collection of reproducible open-source code published in the optics (imaging, display) community.</p>
+
+<p>This project is hosted at <a href="https://github.com/Ni-Chen/paper-with-code-in-optics">Github</a>.</p>
+
+<p><br /></p>
+
+<hr />
+
+<h2 id="phase-imaging-wave-front-sensing">Phase imaging, Wave front sensing</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Year</th>
+      <th>Paper</th>
+      <th style="text-align: center">Author</th>
+      <th style="text-align: center">Language</th>
+      <th style="text-align: center">Link</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">2020</td>
+      <td><a href="https://vccimaging.org/Publications/Wang2019QPM/">Quantitative Phase and Intensity Microscopy Using Snapshot White Light Wavefront Sensing</a></td>
+      <td style="text-align: center"><a href="https://congliwang.github.io">Congli Wang</a></td>
+      <td style="text-align: center">Matlab, CUDA</td>
+      <td style="text-align: center"><a href="https://github.com/vccimaging/PhaseIntensityMicroscope">Github</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2018</td>
+      <td><a href="https://doi.org/10.1364/OE.26.023661">Misalignment Correction of Fourier Ptychographic Microscopy</a></td>
+      <td style="text-align: center">Ao Zhou</td>
+      <td style="text-align: center">Matlab</td>
+      <td style="text-align: center"><a href="https://github.com/Ni-Chen/Misalignment-Correction-FPM">Github</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2017</td>
+      <td><a href="https://dl.acm.org/doi/10.1145/3197517.3201299">Megapixel Adaptive Optics</a></td>
+      <td style="text-align: center"><a href="https://congliwang.github.io">Congli Wang</a></td>
+      <td style="text-align: center">Matlab, CUDA</td>
+      <td style="text-align: center"><a href="https://github.com/vccimaging/MegapixelAO">Github</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="holography">Holography</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Paper</th>
+      <th style="text-align: left">Author</th>
+      <th>Language</th>
+      <th style="text-align: center">Link</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2021</td>
+      <td><a href="https://github.com/Ni-Chen/3D-MB-HoloNet">Model-based Deep 3D holographic imaging</a></td>
+      <td style="text-align: left"><a href="https://congliwang.github.io">Ni Chen</a></td>
+      <td>Matlab, Tensorflow + Keras</td>
+      <td style="text-align: center"><a href="https://github.com/vccimaging/PhaseIntensityMicroscope">Github</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td><a href="https://doi.org/10.1364/OPTICA.6.000045">Kramers–Kronig holographic imaging for high-space-bandwidth product</a></td>
+      <td style="text-align: left">YoonSeok Baek</td>
+      <td>Matlab</td>
+      <td style="text-align: center"><a href="https://osapublishing.figshare.com/articles/journal_contribution/3712889_pdf/7423859">figshare</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td><a href="https://www.sciencedirect.com/science/article/pii/S014381661931084X">Sectional hologram reconstruction through complex deconvolution</a></td>
+      <td style="text-align: left"><a href="https://congliwang.github.io">Ni Chen</a></td>
+      <td>Matlab</td>
+      <td style="text-align: center"><a href="https://github.com/Ni-Chen/Sectional-Holographic-Imaging">Github</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2011</td>
+      <td><a href="https://doi.org/10.1364/AO.50.000H75">Sampling and processing for compressive holography [Invited]</a></td>
+      <td style="text-align: left">Sehoon Lim</td>
+      <td>Matlab</td>
+      <td style="text-align: center"><a href="http://midas.osa.org/midaspub/item/view/1339">OSA</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="scattering-imaging">Scattering imaging</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Paper</th>
+      <th style="text-align: left">Author</th>
+      <th>Language</th>
+      <th style="text-align: center">Link</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2020</td>
+      <td><a href="https://doi.org/10.1364/OL.400869">Non-invasive single-shot recovery of a point-spread function of a memory effect based scattering imaging system</a></td>
+      <td style="text-align: left">Tengfei Wu</td>
+      <td>Matlab</td>
+      <td style="text-align: center"><a href="https://figshare.com/articles/software/Code_Data_for_single-shot_PSF_recovery_of_a_memory_effect_based_scattering_imaging_system/3841320">figshare</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td><a href="https://doi.org/10.1364/OL.41.005003">Single-shot diffraction-limited imaging through scattering layers via bispectrum analysis</a></td>
+      <td style="text-align: left">Tengfei Wu</td>
+      <td>Matlab</td>
+      <td style="text-align: center"><a href="https://figshare.com/articles/dataset/Bispectrum_Basic_Phase-Retrieval_codes_for_single-shot_imaging_of_hidden_object_through_scattering_layers/3593370">figshare</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+
+<div style="text-align: center;">
+  <p>TBC …</p>
+</div>
+
+  <ul class="share-buttons">
+    <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2021/opensource-code/"
+        title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+    <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2021/opensource-code/"
+        title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+  
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = '{"identifier"=>"neysachen"}';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+</div>
+
+  <div id="disqus_thread"></div>
+  
+</div>
+
+
+        <script type="text/javascript">
+          // revert publication list number
+          var olists = document.getElementsByTagName('ol');
+          for (var i = 0; i < olists.length; i++) { 
+            // if (!olists[i].className.match(/\breversed\b/)) 
+            //   continue; 
+            var items = olists[i].getElementsByTagName('li'); 
+            for(var j = 0; j < items.length; j++) {
+               items[j].setAttribute("value", items.length - j); 
+            } 
+          }
+
+      </script>
+      </div>
+    </div>
+
+    
+<footer class="sticky-bottom mt-5">
+  <div class="container" style="text-align:center;">
+    &copy; Copyright 2023, Ni Chen
+    <br>
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://github.com/inukshuk/jekyll-scholar" target="_blank">Jekyll Scholar</a>
+
+    
+    <!-- | Last updated: February 14, 2023 -->
+    | Last updated in February, 2023
+    
+  </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
